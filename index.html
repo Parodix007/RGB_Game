@@ -1,0 +1,58 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="index.css">
+    <title>RGB GAME</title>
+</head>
+<body>
+    <section class="container">
+        <section class="row">
+            <article class="head">
+                <div class="jumbotron">
+                    <p class="display-3">Witamy w RGB Game!</p>
+                    <p class="lead">Zasady sa bardzo proste! Po prostu zanjdź kolor do tego który zostanie podany i ciesz się zdobytą liczbą puntków!</p>
+                    <hr class="my-3">
+                    <div class="jumbo-ui">
+                        <div>
+                            <p><strong>Wybierz poziom trudności:</strong></p>
+                            <button class="btn btn-success my-2 easy_level">Łatwy</button>
+                            <button class="btn btn-danger hard_level">Trudny</button>
+                        </div>
+                        <div>
+                            <button class="btn btn-success btn-lg game_start">Start</button>
+                            <button class="btn btn-danger btn-lg end_game">End</button>
+                        </div>
+                    </div>
+                    <div class="score_label mt-3">
+                        <h2>Wynik: <span class="score"></span></h2>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section class="row">
+            <article class="game-body">
+                <div>
+                    <h2>Kolor którego szukasz: <span><i class="color"></i></span> </h2>
+                </div>
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+                <div class="box">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </article>
+        </section>
+        <footer>
+            <p>Made by: <strong>Sebastian Siarczyński</strong> with &hearts; for coding</p>
+        </footer>
+    </section>
+    <script src="index.js"></script>
+</body>
+</html>

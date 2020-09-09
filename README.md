@@ -1,2 +1,5 @@
 # RGB_Game
-rgb game, made in pure JS(es6+),HTML5 with bootstrap ,CSS3
+
+## Opis
+
+* Aplikacja powstaje na zajecia lekcyjne jako projekt ktory ma zostac przedstawiony, takze w celu powtorzenia Web`owki. Gra polega na odgadywaniu kolorow w systemie RGB.

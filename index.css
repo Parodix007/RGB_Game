@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+body{
+    background-color: #f5f3f4;
+    font-family: 'Lato', sans-serif;
+}
+.head{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.jumbo-ui{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 0;
+}
+.jumbo-ui > div:last-child {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+.jumbo-ui > div:first-child {
+    display: grid;
+    justify-content: center;
+}
+.jumbo-ui > div:first-child > p{
+    margin: 0;
+}
+.score_label{
+    display: none;
+    width: 100%;
+    justify-content: center;
+}
+.game-body{
+    background-color: #b1a7a6;
+    display: grid;
+    width: 100%;
+    border-radius: 6px;
+    padding: 15px;
+}
+.game-body > div:first-child{
+    display: flex;
+    justify-content: center;
+    padding:10px;
+}
+.game-body > div:first-child > h2 > span{
+    color:whitesmoke
+}
+.box{
+    display: none;
+    margin-top:5px;
+    padding:10px;
+    justify-content: center;
+}
+.box > div {
+    border: 3px solid black;
+    border-radius: 6px;
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+}
+footer{
+    font-size: 10px;
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

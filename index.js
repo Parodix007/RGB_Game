@@ -28,7 +28,7 @@ function SetGame() {
     const gameBox = this.boxes.filter((e) => e.style.display === 'flex');
     gameBox.map((e) => {
       Array.from(e.children).map((item) => item.style.backgroundColor = `rgb(${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)}, ${Math.round(Math.random() * 255)})`);
-      Array.from(e.children)[Math.round(Math.random() * Array.from(e.children).length)].style.backgroundColor = color;
+      Array.from(e.children)[Math.round(Math.random() * (Array.from(e.children).length - 1))].style.backgroundColor = color;
     });
     this.color.textContent = color;
   };
@@ -36,11 +36,13 @@ function SetGame() {
     if (box.style.backgroundColor === this.color.textContent) {
       this.setScore();
       this.setColors();
+    } else {
+      this.setColors();
     }
   };
   this.setEventToBoxAndHideButton = (button) => {
     document.getElementsByClassName('score_label')[0].style.display = 'flex';
-    this.boxes.map((boxField) => Array.from(boxField).map((box) => Array.from(box).addEventListener('click', this.checkIfWin)));
+    this.boxes.map((boxField) => Array.from(boxField.children).map((box) => box.addEventListener('click', (item) => this.checkIfWin(item.target))));
     button.style.display = 'none';
     button.nextElementSibling.style.display = '';
     return this.setColors();
@@ -51,7 +53,8 @@ function SetGame() {
     this.score = 0;
     document.getElementsByClassName('color')[0].textContent = '';
     document.getElementsByClassName('score_label')[0].style.display = 'none';
-    this.boxes.map((boxField) => Array.from(boxField).map((box) => Array.from(box).style.backgroundColor = ''));
+    document.getElementsByClassName('score')[0].textContent = '';
+    this.boxes.map((boxField) => Array.from(boxField.children).map((box) => box.style.backgroundColor = ''));
   };
 }
 

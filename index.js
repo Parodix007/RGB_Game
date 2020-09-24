@@ -45,11 +45,22 @@ function SetGame() {
   };
   this.checkIfWin = (box) => {
     if (String(box.style.backgroundColor).replace(/\s/g, '') === this.color.textContent) {
-      console.log('win');
       this.setScore();
       this.setColors();
     } else {
-      this.setColors();
+      let correctBox = null;
+      for (let i = 0; i < this.boxes.length; i += 1) {
+        for (let z = 0; z < this.boxes[i].children.length; z += 1) {
+          if (String(this.boxes[i].children[z].style.backgroundColor).replace(/\s/g, '') === this.color.textContent) {
+            correctBox = this.boxes[i].children[z];
+          }
+        }
+      }
+      correctBox.classList.toggle('correctBox');
+      return setTimeout(() => {
+        correctBox.classList.toggle('correctBox');
+        return this.setColors();
+      }, 1500);
     }
   };
   this.setEventToBoxAndHideButton = (button) => {

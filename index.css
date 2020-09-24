@@ -37,7 +37,7 @@ body{
 }
 .game-body{
     background-color: #b1a7a6;
-    display: grid;
+    display: flexbox;
     width: 100%;
     border-radius: 6px;
     padding: 15px;
@@ -50,6 +50,10 @@ body{
 .game-body > div:first-child > h2 > span{
     color:whitesmoke
 }
+.game-body > div:last-child{
+    display: flex;
+    justify-content: center;
+}
 .box{
     display: none;
     margin-top:5px;
@@ -59,8 +63,8 @@ body{
 .box > div {
     border: 3px solid black;
     border-radius: 6px;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     margin: 10px;
 }
 footer{
@@ -69,4 +73,15 @@ footer{
     width: 100%;
     display: flex;
     justify-content: center;
+}
+.correctBox{
+    transform: scale(1.2);
+    pointer-events: none;
+}
+.correctBox::after{
+    content: 'Prawidlowy kolor';
+    display: flex;
+    color: white;
+    text-align: center;
+    font-size: 1.1rem;
 }
